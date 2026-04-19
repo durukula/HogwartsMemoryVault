@@ -139,10 +139,6 @@ function HouseDetailPage() {
               <h2 className="ui-nowrap mt-4 font-display text-4xl leading-none text-white sm:text-[3.3rem]">
                 {targetHouseName}
               </h2>
-              <p className="mt-4 max-w-4xl font-body text-[1.14rem] leading-relaxed text-white/82">
-                This page is built from character records returned by the HP API for the selected
-                house.
-              </p>
               <p className="mt-4 max-w-3xl font-body text-[1.02rem] leading-relaxed text-white/66">
                 Browse member counts, portraits, recorded actors, and the searchable house roster
                 below.
