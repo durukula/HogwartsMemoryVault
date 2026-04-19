@@ -1,0 +1,587 @@
+.house-layout-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.house-signature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.house-signature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.house-signature-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.house-signature-crest {
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--panel-border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01)),
+    rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.house-signature-metric {
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 16px 30px rgba(0, 0, 0, 0.18);
+}
+
+.house-signature-metric::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    transparent 34%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.03)
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.slytherin-hero-grid,
+.gryffindor-banner-grid,
+.gryffindor-arena-grid,
+.hufflepuff-welcome-grid,
+.hufflepuff-common-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.slytherin-suite-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.ravenclaw-modular-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ravenclaw-module {
+  min-width: 0;
+}
+
+.slytherin-intro-shell,
+.gryffindor-hero-banner,
+.ravenclaw-module--intro,
+.hufflepuff-welcome-copy {
+  position: relative;
+  overflow: hidden;
+}
+
+.slytherin-intro-shell::before,
+.gryffindor-hero-banner::before,
+.ravenclaw-module--intro::before,
+.hufflepuff-welcome-copy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.slytherin-intro-shell::after,
+.gryffindor-hero-banner::after,
+.ravenclaw-module--intro::after,
+.hufflepuff-welcome-copy::after {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  pointer-events: none;
+}
+
+.slytherin-intro-shell::before {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(168, 247, 206, 0.12), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 28%);
+}
+
+.slytherin-intro-shell::after {
+  border-right: 1px solid rgba(219, 242, 230, 0.18);
+  background:
+    linear-gradient(120deg, transparent 0 55%, rgba(181, 237, 211, 0.08) 55% 56%, transparent 56%),
+    radial-gradient(circle at 18% 18%, rgba(74, 255, 153, 0.08), transparent 20%);
+  opacity: 0.8;
+}
+
+.gryffindor-hero-banner::before {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 225, 178, 0.18), transparent 18%),
+    radial-gradient(circle at 86% 18%, rgba(255, 131, 86, 0.16), transparent 18%),
+    linear-gradient(180deg, rgba(255, 230, 184, 0.08), transparent 30%);
+}
+
+.gryffindor-hero-banner::after {
+  inset: auto 1.4rem 1.2rem;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, rgba(255, 214, 156, 0.86), transparent);
+  opacity: 1;
+}
+
+.ravenclaw-module--intro::before {
+  background-image:
+    linear-gradient(rgba(177, 214, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177, 214, 255, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.25;
+}
+
+.ravenclaw-module--intro::after {
+  border: 1px solid rgba(177, 214, 255, 0.1);
+  border-radius: calc(1.8rem - 1rem);
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 222, 172, 0.08), transparent 18%),
+    linear-gradient(90deg, transparent 49%, rgba(177, 214, 255, 0.08) 50%, transparent 51%);
+}
+
+.hufflepuff-welcome-copy::before {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 248, 223, 0.12), transparent 18%),
+    radial-gradient(circle at 84% 82%, rgba(255, 214, 117, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(255, 240, 204, 0.05), transparent 28%);
+}
+
+.hufflepuff-welcome-copy::after {
+  border-radius: calc(2.6rem - 1rem);
+  background-image:
+    radial-gradient(rgba(255, 243, 214, 0.1) 1px, transparent 1px),
+    radial-gradient(rgba(255, 210, 122, 0.08) 1px, transparent 1px);
+  background-position: 0 0, 12px 12px;
+  background-size: 24px 24px;
+  opacity: 0.24;
+}
+
+.house-signature-card--slytherin::before {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(74, 255, 153, 0.14), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 34%);
+}
+
+.house-signature-card--slytherin::after {
+  background:
+    linear-gradient(120deg, transparent 0 62%, rgba(206, 235, 221, 0.1) 62% 63%, transparent 63%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 24%);
+}
+
+.house-signature-card--gryffindor::before {
+  background:
+    radial-gradient(circle at 14% 16%, rgba(255, 226, 173, 0.18), transparent 18%),
+    radial-gradient(circle at 88% 22%, rgba(255, 117, 74, 0.16), transparent 18%);
+}
+
+.house-signature-card--gryffindor::after {
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 210, 142, 0.14), transparent),
+    linear-gradient(180deg, rgba(255, 241, 214, 0.08), transparent 32%);
+}
+
+.house-signature-card--ravenclaw::before {
+  background-image:
+    linear-gradient(rgba(177, 214, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177, 214, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.24;
+}
+
+.house-signature-card--ravenclaw::after {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 226, 172, 0.09), transparent 16%),
+    linear-gradient(90deg, transparent 49%, rgba(177, 214, 255, 0.08) 50%, transparent 51%);
+}
+
+.house-signature-card--hufflepuff::before {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 248, 222, 0.14), transparent 20%),
+    radial-gradient(circle at 82% 80%, rgba(255, 214, 116, 0.1), transparent 20%);
+}
+
+.house-signature-card--hufflepuff::after {
+  background:
+    radial-gradient(rgba(255, 243, 214, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 247, 227, 0.06), transparent 24%);
+  background-size: 22px 22px, auto;
+  opacity: 0.22;
+}
+
+.house-slytherin::before,
+.house-slytherin::after,
+.house-gryffindor::before,
+.house-gryffindor::after,
+.house-ravenclaw::before,
+.house-ravenclaw::after,
+.house-hufflepuff::before,
+.house-hufflepuff::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.house-slytherin::before {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(95, 255, 170, 0.1), transparent 20%),
+    linear-gradient(120deg, transparent 0 58%, rgba(210, 232, 221, 0.06) 58% 59%, transparent 59%);
+  opacity: 0.9;
+}
+
+.house-slytherin::after {
+  inset: 6% 5%;
+  border: 1px solid rgba(219, 242, 230, 0.08);
+  mask-image: linear-gradient(180deg, transparent, black 20%, black 80%, transparent);
+  opacity: 0.25;
+}
+
+.house-gryffindor::before {
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255, 211, 149, 0.12), transparent 18%),
+    radial-gradient(circle at 84% 22%, rgba(255, 126, 89, 0.1), transparent 18%),
+    linear-gradient(180deg, rgba(255, 224, 182, 0.05), transparent 24%);
+}
+
+.house-gryffindor::after {
+  background:
+    linear-gradient(90deg, transparent 0 10%, rgba(255, 214, 156, 0.05) 10% 12%, transparent 12% 88%, rgba(255, 214, 156, 0.05) 88% 90%, transparent 90%),
+    linear-gradient(180deg, transparent 0 16%, rgba(255, 214, 156, 0.05) 16% 17%, transparent 17%);
+  opacity: 0.55;
+}
+
+.house-ravenclaw::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(129, 202, 255, 0.14), transparent 18%),
+    radial-gradient(circle at 86% 14%, rgba(255, 205, 124, 0.12), transparent 20%),
+    linear-gradient(rgba(177, 214, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177, 214, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+  opacity: 0.3;
+}
+
+.house-ravenclaw::after {
+  background:
+    radial-gradient(circle at 50% 14%, rgba(255, 214, 138, 0.09), transparent 16%),
+    radial-gradient(circle at 84% 16%, rgba(255, 229, 182, 0.08), transparent 14%),
+    linear-gradient(90deg, transparent 49.5%, rgba(177, 214, 255, 0.08) 50%, transparent 50.5%),
+    linear-gradient(180deg, transparent 34%, rgba(177, 214, 255, 0.06) 34.5%, transparent 35%),
+    linear-gradient(135deg, transparent 0 68%, rgba(255, 210, 136, 0.07) 68% 69%, transparent 69%);
+  opacity: 0.46;
+}
+
+.house-hufflepuff::before {
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255, 247, 214, 0.14), transparent 18%),
+    radial-gradient(circle at 74% 18%, rgba(255, 224, 146, 0.1), transparent 18%),
+    radial-gradient(circle at 82% 82%, rgba(255, 214, 118, 0.12), transparent 18%),
+    linear-gradient(180deg, rgba(255, 242, 204, 0.04), transparent 26%);
+}
+
+.house-hufflepuff::after {
+  background:
+    radial-gradient(rgba(255, 243, 214, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(255, 212, 126, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, transparent 0 74%, rgba(255, 241, 201, 0.06) 74% 75%, transparent 75%);
+  background-position: 0 0, 12px 12px, 0 0;
+  background-size: 26px 26px, 26px 26px, auto;
+  opacity: 0.26;
+}
+
+.house-game-shell {
+  gap: 1.25rem;
+}
+
+.house-game-unified-grid,
+.house-game-board-grid,
+.house-game-support-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.house-game-hero-card,
+.house-game-control-card,
+.house-game-stage-card,
+.house-game-rules-card,
+.house-game-results-card {
+  min-width: 0;
+}
+
+.house-game-stage-card--featured {
+  position: relative;
+}
+
+.house-game-stage-top {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.house-game-stage-main {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.house-game-play-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.house-game-start-button {
+  min-width: 13.75rem;
+  min-height: 4rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.3em;
+  box-shadow:
+    0 0 0 1px var(--accent-border),
+    0 0 30px var(--accent-glow-strong),
+    0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.house-character-frame {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 22rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.24)),
+    rgba(0, 0, 0, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.house-character-frame::after {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: calc(2rem - 1rem);
+  pointer-events: none;
+}
+
+.house-character-stage,
+.house-character-empty {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.house-character-empty {
+  min-height: 22rem;
+}
+
+.house-character-image {
+  display: block;
+  width: 11rem;
+  height: 14rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.3rem;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 36px rgba(0, 0, 0, 0.28);
+}
+
+.house-character-empty {
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 18%, var(--accent-wash), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.12));
+}
+
+.house-game-progress-track {
+  position: relative;
+  overflow: hidden;
+  height: 0.8rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.house-game-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--progress-gradient);
+  box-shadow: 0 0 24px var(--accent-glow-strong);
+  transition: width 0.25s ease;
+}
+
+.house-game-sidebar {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.house-game-rule,
+.house-game-result-row,
+.house-game-stat-tile,
+.house-game-message {
+  backdrop-filter: blur(14px);
+}
+
+.house-game-message--info {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.house-game-message--success {
+  border-color: var(--accent-border);
+  background: var(--accent-soft-bg);
+  box-shadow: 0 0 18px var(--accent-glow);
+}
+
+.house-game-message--warning {
+  border-color: rgba(255, 209, 102, 0.34);
+  background: rgba(255, 209, 102, 0.12);
+}
+
+.house-game-message--error {
+  border-color: rgba(255, 114, 114, 0.4);
+  background: rgba(140, 28, 28, 0.28);
+  box-shadow: 0 0 22px rgba(255, 114, 114, 0.16);
+}
+
+@media (min-width: 1280px) {
+  .house-game-unified-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .house-game-board-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .house-game-stage-main {
+    grid-template-columns: minmax(0, 1.18fr) minmax(21rem, 0.82fr);
+  }
+
+  .house-game-support-grid {
+    grid-template-columns: minmax(20rem, 0.82fr) minmax(20rem, 0.9fr) minmax(21rem, 0.82fr);
+  }
+
+  .slytherin-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  }
+
+  .slytherin-suite-grid {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) minmax(0, 0.96fr);
+  }
+
+  .gryffindor-banner-grid {
+    grid-template-columns: minmax(0, 1.28fr) minmax(22rem, 0.72fr);
+    align-items: center;
+  }
+
+  .gryffindor-arena-grid {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) minmax(0, 0.82fr);
+  }
+
+  .ravenclaw-modular-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .ravenclaw-module--intro {
+    grid-column: span 7;
+  }
+
+  .ravenclaw-module--spotlight {
+    grid-column: span 5;
+  }
+
+  .ravenclaw-module--signature {
+    grid-column: span 4;
+  }
+
+  .ravenclaw-module--progress {
+    grid-column: span 8;
+  }
+
+  .ravenclaw-module--modes {
+    grid-column: span 4;
+  }
+
+  .ravenclaw-module--board {
+    grid-column: span 8;
+  }
+
+  .ravenclaw-module--ledger {
+    grid-column: span 4;
+  }
+
+  .ravenclaw-module--keyboard {
+    grid-column: span 8;
+  }
+
+  .ravenclaw-module--notes {
+    grid-column: span 4;
+  }
+
+  .ravenclaw-module--showcase {
+    grid-column: span 12;
+  }
+
+  .hufflepuff-welcome-grid {
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  }
+
+  .hufflepuff-common-grid {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr) minmax(0, 0.94fr);
+  }
+
+  .hufflepuff-common-grid > :nth-child(2) {
+    transform: translateY(-0.75rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .house-layout-shell {
+    gap: 1.5rem;
+  }
+
+  .house-game-stage-main {
+    gap: 1.25rem;
+  }
+
+  .house-character-frame,
+  .house-character-empty {
+    min-height: 18rem;
+  }
+
+  .house-character-image {
+    width: 12rem;
+    height: 15.5rem;
+  }
+
+  .gryffindor-hero-banner::after {
+    height: 6px;
+  }
+}
