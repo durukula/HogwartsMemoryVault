@@ -1364,27 +1364,18 @@
     radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.22), transparent 16%),
     radial-gradient(circle at 76% 20%, rgba(155, 230, 255, 0.18), transparent 22%),
     radial-gradient(circle at 52% 100%, rgba(77, 188, 255, 0.42), transparent 44%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 28%),
-    linear-gradient(
-      0deg,
-      rgba(72, 166, 255, 0.46) 0%,
-      rgba(92, 196, 255, 0.32) 24%,
-      rgba(139, 228, 255, 0.18) 48%,
-      rgba(255, 255, 255, 0.02) 70%
-    );
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 28%);
   background-repeat: no-repeat;
   background-size:
     100% 100%,
     100% 100%,
     160% 90%,
-    100% 100%,
-    100% 220%;
+    100% 100%;
   background-position:
     center center,
     center center,
     center 132%,
-    center center,
-    center 118%;
+    center center;
   opacity: 0.94;
   animation: spell-aguamenti-fill 5s ease-in-out both;
 }
@@ -1699,8 +1690,7 @@
       center center,
       center center,
       center 140%,
-      center center,
-      center 128%;
+      center center;
     opacity: 0.38;
   }
 
@@ -1709,8 +1699,7 @@
       center center,
       center center,
       center 114%,
-      center center,
-      center 92%;
+      center center;
     opacity: 0.72;
   }
 
@@ -1719,8 +1708,7 @@
       center center,
       center center,
       center 92%,
-      center center,
-      center 58%;
+      center center;
     opacity: 0.96;
   }
 
@@ -1729,8 +1717,7 @@
       center center,
       center center,
       center 86%,
-      center center,
-      center 42%;
+      center center;
     opacity: 0.92;
   }
 
@@ -1739,8 +1726,7 @@
       center center,
       center center,
       center 98%,
-      center center,
-      center 62%;
+      center center;
     opacity: 0.7;
   }
 }

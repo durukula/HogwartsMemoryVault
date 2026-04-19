@@ -16,9 +16,6 @@ function AguamentiOverlay({ duration = 5000 }) {
       style={{ '--spell-aguamenti-duration': `${duration}ms` }}
     >
       <div className="spell-aguamenti-fill">
-        <div className="spell-aguamenti-surface" />
-        <div className="spell-aguamenti-shimmer" />
-
         {bubbles.map((bubble) => (
           <span
             key={bubble.id}
