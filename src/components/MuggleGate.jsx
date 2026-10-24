@@ -661,7 +661,7 @@ function MuggleGate({ onReveal }) {
                     </p>
                   ) : (
                     <p style={{ marginTop: '10px' }}>
-                      Hint: advanced sorcery, surprisingly simple spelling. Password: revelio
+                      Hint: advanced sorcery, surprisingly simple spelling.
                     </p>
                   )}
 
